@@ -1,6 +1,12 @@
-node_modules/
-client/dist/
-server/.env
-server/backups/
-server/backups-test/
+﻿node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+coverage/
+.DS_Store
 *.log
+
+# Database backups
+server/backups/
