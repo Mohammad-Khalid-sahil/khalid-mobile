@@ -14,3 +14,5 @@ services:
         generateValue: true
       - key: ADMIN_PASSWORD
         sync: false
+      - key: TRUST_PROXY
+        value: "1"
