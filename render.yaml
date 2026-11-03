@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: khalid-mobile-demo
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --prefix client && npm run build --prefix client && npm ci --prefix server
+    startCommand: npm start --prefix server
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
